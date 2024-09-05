@@ -24,6 +24,11 @@
 
   time.timeZone = "America/Chicago";
 
+  zramSwap = {
+    enable = true;
+    memoryMax = 4294967296; # Set max zram swap to 4 GB.
+  };
+
   environment.systemPackages = with pkgs; [
     vim
     git
