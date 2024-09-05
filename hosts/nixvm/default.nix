@@ -31,6 +31,14 @@
 
   time.timeZone = "America/Chicago";
 
+  console = {
+    font = "ter-v18n";
+    keyMap = "us";
+    packages = with pkgs; [
+      terminus_font
+    ];
+  };
+
   zramSwap = {
     enable = true;
     memoryMax = 4294967296; # Set max zram swap to 4 GB.
