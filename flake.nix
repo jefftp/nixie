@@ -18,17 +18,15 @@
   } @ inputs:
   let
     system = "x86_64-linux";
-    host = "torment";
   in {
     nixosConfigurations = {
-      torment = nixpkgs.lib.nixosSystem {
+      nixvm = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
           inherit system;
-          inherit host;
         };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/nixvm
         ];
       };
     };
