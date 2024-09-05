@@ -7,18 +7,11 @@
 #   /nix - Subvol - /nix
 #
 {
-  lib,
-  pkgs,
-  disk ? "/dev/sda",
-  configVars,
-  ...
-}:
-{
   disko.devices = {
     disk = {
-      disk0 = {
+      sda = {
         type = "disk";
-        device = disk;
+        device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
