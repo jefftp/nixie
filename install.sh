@@ -5,3 +5,6 @@ nix --experimental-features "nix-command flakes" run github:nix-community/disko 
 
 # Generate initial configs
 nixos-generate-config --no-filesystems --root /mnt
+
+# Copy flake to /etc/nixos/nixie
+cp -r . /mnt/etc/nixos/nixie
