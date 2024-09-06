@@ -10,11 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.disko.nixosModules.disko
-    ../../disko/btrfs.nix {
-      _module.args = {
-        disk = "/dev/sda";
-      };
-    }
+    ../../disko/btrfs.nix
   ];
 
   boot.loader = {
